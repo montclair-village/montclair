@@ -177,3 +177,11 @@ footer p {
         font-size: 1.2rem;
     }
 }
+
+img {
+    max-width: 100%;     /* Images won't exceed the width of their container */
+    height: auto;        /* Keep the aspect ratio intact */
+    border-radius: 8px;  /* Optional: keep the rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: keeps shadow effect */
+}
+
