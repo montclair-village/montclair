@@ -5,55 +5,73 @@
     box-sizing: border-box;
 }
 
+/* Variables for colors and fonts */
+:root {
+    --primary-color: #2d3e50; /* Dark blue */
+    --secondary-color: #f39c12; /* Gold/Orange */
+    --light-color: #f4f4f4; /* Light gray */
+    --text-color: #333; /* Dark gray/black */
+    --font-family: 'Arial', sans-serif; /* Use a more modern font if desired */
+}
+
 /* Body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: var(--font-family);
+    background-color: var(--light-color);
+    color: var(--text-color);
     line-height: 1.6;
-    padding-top: 50px; /* To prevent header from covering content */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-top: 70px; /* Adjusted for better header spacing */
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 /* Header Styling */
 header {
-    background-color: #2d3e50; /* Dark blue */
+    background-color: var(--primary-color);
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 15px 20px; /* Adjusted padding */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between; /* Align items */
+    align-items: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem; /* Slightly smaller */
+    margin: 0;
+    transition: font-size 0.3s ease;
 }
 
 nav {
-    margin-top: 10px;
+    margin: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500; /* Slightly less bold */
     margin: 0 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 8px 12px; /* Add some padding around the links */
+    border-radius: 5px; /* Rounded corners for links */
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #f39c12;
+    background-color: var(--secondary-color); /* Use secondary color on hover */
+    color: white;
 }
+
 
 /* Language Switch */
 .language-switch {
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
 }
 
 .language-switch a {
@@ -61,48 +79,57 @@ nav a:hover {
     font-size: 1rem;
     margin-left: 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .language-switch a:hover {
-    color: #f39c12;
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 /* Main Content */
 main {
-    margin-top: 120px; /* Push content down to avoid overlap with header */
-    padding: 30px;
+    margin-top: 80px; /* Adjusted */
+    padding: 20px;
+    transition: margin-top 0.3s ease;
 }
 
 h2 {
-    font-size: 2rem;
-    color: #2d3e50;
+    font-size: 1.6rem;
+    color: var(--primary-color);
     margin-bottom: 15px;
+    transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 /* Section Styling */
 .intro {
-    background-color: #ffffff;
-    padding: 30px;
+    background-color: white;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .intro p {
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.7;
+    transition: font-size 0.3s ease;
 }
 
 /* Photo Slider Section */
 .photo-slider {
     text-align: center;
+    margin-bottom: 30px; /* Add margin below the slider */
 }
 
 .slider {
     position: relative;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto; /* Center the slider */
+    overflow: hidden; /* Hide overflowing images */
 }
 
 .slider img {
@@ -110,78 +137,108 @@ h2 {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease; /* Smooth image transitions */
 }
 
 .slider-controls {
     position: absolute;
     top: 50%;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the controls */
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+    gap: 10px; /* Space between buttons */
+    z-index: 1; /* Ensure controls are above the image */
 }
 
-button {
-    background: rgba(0, 0, 0, 0.6);
+.slider-controls button {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px; /* Slightly bigger buttons */
     cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    border-radius: 5px; /* Rounded buttons */
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #f39c12;
+.slider-controls button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Footer Styling */
 footer {
-    background-color: #2d3e50;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 15px;
     position: relative;
+    transition: background-color 0.3s ease;
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: font-size 0.3s ease;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
     header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    nav {
+        margin-top: 10px;
     }
 
     nav a {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin: 0 10px;
+        padding: 5px 8px;
     }
 
     .language-switch {
-        top: 10px;
-        right: 10px;
+        margin-top: 10px; /* Add some top margin */
     }
 
-    .intro p {
-        font-size: 1rem;
+    .language-switch a {
+        font-size: 0.8rem;
+    }
+
+    main {
+        padding: 15px;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
     }
 
     .slider-controls button {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
     }
 }
 
 img {
-    max-width: 100%;     /* Images won't exceed the width of their container */
-    height: auto;        /* Keep the aspect ratio intact */
-    border-radius: 8px;  /* Optional: keep the rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: keeps shadow effect */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Prevent small space below image */
+    margin: 0 auto; /* Center the image */
 }
-
