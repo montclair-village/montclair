@@ -1,0 +1,74 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #0078a0;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #0078a0;
+}
+
+.intro {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.photo-slider {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button:hover {
+    background: #0078a0;
+}
