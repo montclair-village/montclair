@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montclair</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à Montclair !</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+      <div class="language-switch">
+    <a href="index-fr.html">🇫🇷 Français</a> | <a href="index.html">🇬🇧 English</a>
+</div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Découvrez Montclair</h2>
+            <p>
+                Entre les montagnes panoramiques et les paysages verdoyants, Montclair a été une destination admirée depuis sa fondation.  
+                Avec son ravin historique, ses îles pittoresques, et ses grottes, Montclair est un mélange harmonieux de nature et de tradition.
+            </p>
+        </section>
+
+        <section class="photo-slider">
+            <h2>Photos</h2>
+            <div class="slider">
+                <img src="images/ravine.jpg" alt="Townhall View" id="slide" />
+                <div class="slider-controls">
+                    <button onclick="prevSlide()"></button>
+                    <button onclick="nextSlide()"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Montclair</p>
+    </footer>
+
+    <script>
+        // Basic Photo Slider Script
+        const images = ["images/townhall.jpg", "images/ravine.jpg", "images/mountains.jpg"];
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slide = document.getElementById("slide");
+            currentSlide = (index + images.length) % images.length;
+            slide.src = images[currentSlide];
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+</body>
+</html>
