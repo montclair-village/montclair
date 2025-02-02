@@ -117,7 +117,7 @@ h2 {
 /* Slider Controls (arrows) */
 .slider-controls {
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -145,11 +145,11 @@ button:hover {
 
 /* Position arrows outside the image */
 button:first-of-type {
-    left: -30px;  /* Move the "previous" button outside */
+    left: -80px;  /* Move the "previous" button outside */
 }
 
 button:last-of-type {
-    right: -30px; /* Move the "next" button outside */
+    right: -80px; /* Move the "next" button outside */
 }
 
 /* Footer Styling */
