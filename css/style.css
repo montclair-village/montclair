@@ -141,6 +141,15 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%); /* Keep buttons vertically centered */
+    line-height: 1;       /* Ensures text doesn't get extra vertical spacing */
+    padding: 0;           /* Remove any default padding */
+    margin: 0;            /* Remove any default margin */
+}
+
+button span {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 button:hover {
