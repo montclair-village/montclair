@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Zoomable Image - Montclair</title>
+  <!-- Link to your style.css or include styles below -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* The outer container has fixed dimensions and hides overflow */
+    .panzoom-container {
+      width: 800px;    /* Set container width as needed */
+      height: 450px;   /* Set container height as needed */
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid #ccc; /* Optional, for visual reference */
+      position: relative;
+    }
+
+    /* The inner wrapper will be the element that gets panned and zoomed */
+    .panzoom-content {
+      cursor: grab;
+      /* No fixed dimensions; it will scale according to its content */
+    }
+
+    /* Remove default constraints on the image */
+    .panzoom-content img {
+      display: block;
+      max-width: none;  /* Allow the image to grow beyond the container if zoomed */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Zoomable Image</h1>
+
+  <!-- Outer container -->
+  <div class="panzoom-container" id="panzoom-container">
+    <!-- Inner content that will be pan/zoomed -->
+    <div class="panzoom-content">
+      <img src="your-image.jpg" alt="Zoomable Image" id="zoom-image">
+    </div>
+  </div>
+
+  <!-- Include Panzoom from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+  <script>
+    // Initialize Panzoom on the inner content element
+    const panzoomElem = document.querySelector('.panzoom-content');
+    const panzoomInstance = Panzoom(panzoomElem, {
+      maxScale: 3,         // Allow zooming up to 3x
+      contain: 'outside',  // Allow the image to be panned outside its initial bounds
+      startScale: 1        // Start at 1x (original size)
+    });
+
+    // Attach the wheel event to the outer container for zooming with the mouse wheel
+    document.getElementById('panzoom-container').addEventListener('wheel', panzoomInstance.zoomWithWheel);
+  </script>
+
+</body>
+</html>
