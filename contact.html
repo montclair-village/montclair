@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Montclair</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Montclair</h1>
+    <nav>
+      <a href="index.html">Home Page</a> |
+      <a href="about.html">About the Village</a> |
+      <a href="townhall.html">Townhall</a> |
+      <a href="tourism.html">Tourism</a> |
+      <a href="news.html">News & Events</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="heritage.html">Heritage & Nature</a> |
+      <a href="gallery.html">Photo Gallery</a> |
+      <a href="projects.html">Community Projects</a> |
+      <a href="history.html">Local History</a> |
+      <a href="guidelines.html">Visitor Guidelines</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Please feel free to get in touch with us using the contact form below or through the following details:</p>
+      <ul>
+        <li><strong>Address:</strong> X: 150 | Z: -330 (or /warp montclair)</li>
+        <li><strong>Email:</strong> N/A</li>
+      </ul>
+    </section>
+    
+    <section class="contact-form">
+      <h3>Send Us a Message</h3>
+      <!-- Modify the form action if you set up a backend script or use a service -->
+      <form action="submit_form.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
+    
+    <section class="map">
+      <h3>Our Location</h3>
+      <p>Below is a custom map showing Montclair’s location with our Minecraft coordinates:</p>
+      <!-- Replace 'mc-map.png' with your custom map image -->
+      <img src="images/mc-map.png" alt="Map of Montclair (Minecraft Coordinates)" style="width:100%; max-width:600px; border:1px solid #ccc; border-radius:8px;">
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Montclair</p>
+  </footer>
+</body>
+</html>
