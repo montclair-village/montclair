@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Seed Viewer Embed Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Load the external CSS from mcseedmap.net -->
+  <link rel="stylesheet" href="https://mcseedmap.net/assets/app-B-Sp6Nxu.css">
+  <style>
+    /* Ensure the viewer takes up full viewport height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    #root {
+      height: 100vh;
+    }
+  </style>
+  <!-- Load the JavaScript module that powers the viewer -->
+  <script type="module" async crossorigin src="https://mcseedmap.net/assets/app-Cj060-FQ.js"></script>
+</head>
+<body>
+  <!-- This is the container where the interactive viewer will be mounted -->
+  <div id="root"></div>
+  
+  <script>
+    /* 
+      The mcseedmap site uses the URL hash to configure the viewer. 
+      For example, their demo URL looks like: 
+        https://mcseedmap.net/1.21.4-Java/map#l=-2
+      You might try setting the hash or other parameters. 
+      
+      Below, we set the hash to include a seed parameter (this is an example;
+      you may need to consult mcseedmap’s documentation or experiment).
+    */
+    window.location.hash = "#seed=-6384072834210287278"; // Replace with your Minecraft seed
+    
+    /* 
+      Depending on how the viewer is initialized, you might need to call an initialization function.
+      Since the full code isn’t available here, if the viewer doesn’t load automatically you may need 
+      to consult the mcseedmap source for an exposed init() function or configuration object.
+    */
+  </script>
+</body>
+</html>
