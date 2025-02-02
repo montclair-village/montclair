@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery - Montclair</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Gallery-specific styles (you can also put these in style.css if you prefer) */
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .gallery-grid img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Montclair</h1>
+    <nav>
+      <a href="index.html">Home Page</a> |
+      <a href="about.html">About the Village</a> |
+      <a href="townhall.html">Townhall</a> |
+      <a href="tourism.html">Tourism</a> |
+      <a href="news.html">News & Events</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="heritage.html">Heritage & Nature</a> |
+      <a href="gallery.html">Photo Gallery</a> |
+      <a href="projects.html">Community Projects</a> |
+      <a href="history.html">Local History</a> |
+      <a href="guidelines.html">Visitor Guidelines</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-intro">
+      <h2>Photo Gallery</h2>
+      <p>Explore images showcasing the beauty of Montclair—from scenic landscapes and townhall views to key natural features.</p>
+    </section>
+    
+    <section class="gallery-grid">
+      <!-- Replace these with your actual images -->
+      <img src="images/gallery1.jpg" alt="Landscape view">
+      <img src="images/gallery2.jpg" alt="Townhall view">
+      <img src="images/gallery3.jpg" alt="Ravine">
+      <img src="images/gallery4.jpg" alt="Cave">
+      <img src="images/gallery5.jpg" alt="Island view">
+      <!-- Add more images as needed -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Montclair</p>
+  </footer>
+</body>
+</html>
