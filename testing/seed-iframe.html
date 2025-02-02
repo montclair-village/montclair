@@ -1,0 +1,18 @@
+<script src="https://cdn.jsdelivr.net/npm/ol/dist/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/dist/ol.css">
+
+<div id="map" style="width: 100%; height: 600px;"></div>
+<script>
+  const map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(-6384072834210287278), // Replace with a custom biome/seed tile source if available
+      }),
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([175, -272]), // Replace with seed-based center coords
+      zoom: 2, // Adjust zoom level
+    }),
+  });
+</script>
