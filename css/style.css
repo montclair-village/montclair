@@ -308,3 +308,17 @@ header nav {
     text-align: center; 
 }
 
+.visitor-guidelines h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.visitor-guidelines ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.visitor-guidelines p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
