@@ -49,24 +49,28 @@
         <p>© 2025 Montclair</p>
     </footer>
 
-    <script>
-        // Basic Photo Slider Script
-        const images = ["images/townhall.jpg", "images/ravine.jpg", "images/mountains.jpg"];
-        let currentSlide = 0;
+   <script>
+      const images = ["images/townhall.jpg", "images/ravine.jpg", "images/mountains.jpg"];
+      let currentSlide = 0;
 
-        function showSlide(index) {
-            const slide = document.getElementById("slide");
-            currentSlide = (index + images.length) % images.length;
-            slide.src = images[currentSlide];
-        }
+      function showSlide(index) {
+          const slide = document.getElementById("slide");
+          currentSlide = (index + images.length) % images.length;
+          slide.src = images[currentSlide];
+      }
 
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
+      function nextSlide() {
+          showSlide(currentSlide + 1);
+      }
 
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-    </script>
+      function prevSlide() {
+          showSlide(currentSlide - 1);
+      }
+
+      // Initialize the slider once the DOM is fully loaded
+      document.addEventListener('DOMContentLoaded', () => {
+          showSlide(currentSlide);
+      });
+  </script>
 </body>
 </html>
