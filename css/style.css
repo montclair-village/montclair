@@ -331,3 +331,7 @@ header nav {
   border-radius: 8px;
   text-align: center;
 }
+
+.about-history p strong {
+  color: #2d3e50; /* Emphasize the "Affiliation:" label */
+}
