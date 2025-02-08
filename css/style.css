@@ -335,3 +335,9 @@ header nav {
 .about-history p strong {
   color: #2d3e50; /* Emphasize the "Affiliation:" label */
 }
+
+.news-item {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
